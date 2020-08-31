@@ -29,8 +29,10 @@ public class MakeChange {
 		kb.close();
 	}
 	
+	
 	public static void calculateChange ( float due, float paid ) {
-		int balance = ( int ) ( ( paid - due ) * 100 );
+		
+		int balance = ( int ) Math.round( ( paid - due ) * 100 );
 		String changeGiven = String.format("Amount: %.2f, Tendered: %.2f, Result: ", due, paid);
 		String twenties = "";
 		String tens = "";
